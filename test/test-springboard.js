@@ -44,7 +44,6 @@ contract("Springboard", accounts => {
       // Write you code here....
       // 1) Upgrade wallet to V2
       // 2) verify wallet version == 2.0 after upgrade
-
       await walletV1.die();
       runtimeCode = WalletV2.deployedBytecode;
       tx = await springboard.execute(runtimeCode);
